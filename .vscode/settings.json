@@ -1,0 +1,8 @@
+{
+  "editor.scrollbar.horizontalScrollbarSize": 10,
+  "editor.scrollbar.verticalScrollbarSize": 10,
+  "editor.smoothScrolling": true,
+  "editor.wordWrap": "on",
+  "accessibility.signalOptions.volume": 65,
+  "debug.console.lineHeight": 1
+}
