@@ -1,10 +1,24 @@
 
 from openai import OpenAI
-client = OpenAI()
+import os
 
-response = client.responses.create(
-  model="gpt-5",
-  input="Write a one-sentence bedtime story about a unicorn."
-)
+# Initialize the OpenAI client
+client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 
-print(response.output_text)
+try:
+    # Use the correct chat completions API
+    response = client.chat.completions.create(
+        model="gpt-4",
+        messages=[
+            {"role": "user", "content": "Write a one-sentence bedtime story about a unicorn."}
+        ],
+        max_tokens=100
+    )
+
+    # Extract the response text
+    story = response.choices[0].message.content
+    print(story)
+
+except Exception as e:
+    print(f"Error: {e}")
+    print("Make sure you have set your OPENAI_API_KEY environment variable.")
