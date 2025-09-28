@@ -12,5 +12,41 @@ venv/
 ._*
 .Trashes
 
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
 
+# Build artifacts
+build/
+dist/
+site/
+*.egg-info/
+.eggs/
 
+# Environments
+openai-env/
+.python-version
+
+# IDE/editor
+.vscode/
+.idea/
+.history/
+
+# OS
+Thumbs.db
+ehthumbs.db
+
+# Logs
+*.log

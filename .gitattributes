@@ -1,0 +1,12 @@
+* text=auto eol=lf
+
+# Treat images and binaries as binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.zip binary
+*.tar binary
+*.gz binary
+*.pdf binary
