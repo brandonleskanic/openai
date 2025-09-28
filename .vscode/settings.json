@@ -21,5 +21,19 @@
   "editor.lineHeight": 1.5,
   "markdown.preview.lineHeight": 1.5,
   "editor.allowVariableFonts": true,
-  "editor.allowVariableFontsInAccessibilityMode": true
+  "editor.allowVariableFontsInAccessibilityMode": true,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "python.analysis.typeCheckingMode": "basic",
+  "python.defaultInterpreterPath": "python3",
+  "ruff.configuration": "${workspaceFolder}/pyproject.toml",
+  "ruff.lint.run": "onSave",
+  "ruff.fixAll": true,
+  "ruff.organizeImports": true
 }
