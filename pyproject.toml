@@ -1,0 +1,43 @@
+[tool.black]
+line-length = 100
+target-version = ["py312"]
+
+[tool.ruff]
+line-length = 100
+src = ["."]
+# Exclude the project-local virtual environment from linting
+extend-exclude = ["openai-env/"]
+# Enable Ruff formatter compatibility with Black-like rules
+select = [
+  "E", "F", "I", # pycodestyle, pyflakes, isort
+  "UP",            # pyupgrade
+  "B",             # flake8-bugbear
+  "SIM",           # flake8-simplify
+  "PGH",           # pygrep-hooks
+  "PL",            # pylint rules (subset)
+  "RUF"
+]
+ignore = [
+  "E203",  # Whitespace before ':' (Black compatibility)
+  "E266"   # Too many leading '#' for block comment
+]
+unfixable = [
+  "F401"  # Do not auto-delete unused imports blindly
+]
+
+
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.pyright]
+typeCheckingMode = "basic"
+venvPath = "."
+venv = "openai-env"
+exclude = ["openai-env"]
